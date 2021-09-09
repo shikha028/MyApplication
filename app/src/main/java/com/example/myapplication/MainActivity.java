@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import static com.example.myapplication.Days.MONDAY;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -50,6 +52,34 @@ public class MainActivity extends ViewStateActivity {
             showSuccess();
         } catch (ArithmeticException ex) {
             showError();
+        }
+
+
+    }
+
+    protected void translate(Days day){
+        switch (day){
+            case MONDAY:
+                showToast("सोमवार");
+                break;
+            case TUESDAY:
+                showToast("मंगलवार");
+                break;
+            case WEDNESDAY:
+                showToast("बुधवार");
+                break;
+            case THURSDAY:
+                showToast("गुरूवार");
+                break;
+            case FRIDAY:
+                showToast("शुक्रवार");
+                break;
+            case SATURDAY:
+                showToast("शनिवार");
+                break;
+            case SUNDAY:
+                showToast("रविवार");
+                break;
         }
     }
 }

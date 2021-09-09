@@ -14,4 +14,9 @@ public abstract class ViewStateActivity extends BaseActivity implements BaseView
     public void showError() {
         Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    public void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
 }
